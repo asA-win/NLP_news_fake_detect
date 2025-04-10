@@ -1,0 +1,131 @@
+/* Global resets */
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f8f9fc;
+  color: #333;
+}
+
+.container {
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #0d47a1;
+  margin: 0;
+}
+
+/* Textarea */
+textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+  border-color: #1976d2;
+  outline: none;
+}
+
+/* Button */
+button {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  position: relative;
+}
+
+button:hover:not(:disabled) {
+  background: #0d47a1;
+  transform: translateY(-1px);
+}
+
+button:disabled {
+  background: #9eb5d1;
+  cursor: not-allowed;
+}
+
+/* Spinner */
+.spinner {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 3px solid #fff;
+  border-top: 3px solid #0d47a1;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Error message */
+.error {
+  color: #b00020;
+  margin-top: 0.5rem;
+  font-weight: bold;
+}
+
+/* Results */
+.results {
+  margin-top: 2rem;
+}
+
+.card {
+  background: #ffffff;
+  padding: 1.25rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  margin-bottom: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  margin: 0 0 0.5rem 0;
+  color: #0d47a1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  textarea {
+    font-size: 0.95rem;
+  }
+
+  button {
+    width: 100%;
+  }
+}
